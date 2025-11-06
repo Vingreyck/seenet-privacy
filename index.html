@@ -57,12 +57,40 @@
         <p>O <strong>SeeNet</strong> é um aplicativo de diagnóstico técnico com inteligência artificial para provedores de internet. Esta política descreve como coletamos, usamos e protegemos suas informações.</p>
         
         <h2>1. 📊 Informações Coletadas</h2>
-        <p>O SeeNet coleta os seguintes dados:</p>
+        <p>O SeeNet coleta e processa os seguintes dados:</p>
+        
+        <h3>1.1. Dados de Cadastro</h3>
         <ul>
-            <li><strong>Dados de cadastro:</strong> Nome, email, empresa</li>
-            <li><strong>Dados de uso:</strong> Diagnósticos realizados, checklists preenchidos</li>
-            <li><strong>Logs de sistema:</strong> Atividades técnicas, alterações de configuração</li>
-            <li><strong>Gravação de áudio:</strong> O app utiliza o microfone do dispositivo para capturar áudio e convertê-lo em texto (transcrição de voz). Esta funcionalidade é opcional e só é ativada quando o usuário pressiona o botão de gravação. O áudio é processado e apenas o texto transcrito é armazenado. Os arquivos de áudio não são salvos permanentemente no dispositivo ou no servidor.</li>
+            <li>Nome completo do usuário</li>
+            <li>Endereço de email</li>
+            <li>Nome da empresa/organização</li>
+            <li>Função/cargo do usuário</li>
+        </ul>
+        
+        <h3>1.2. Dados de Uso</h3>
+        <ul>
+            <li>Diagnósticos técnicos realizados</li>
+            <li>Checklists preenchidos</li>
+            <li>Histórico de atendimentos</li>
+            <li>Dados de desempenho do app</li>
+        </ul>
+        
+        <h3>1.3. Dados de Áudio e Transcrição</h3>
+        <p><strong>Permissão: android.permission.RECORD_AUDIO</strong></p>
+        <ul>
+            <li><strong>Finalidade:</strong> Capturar áudio do microfone para converter fala em texto (speech-to-text)</li>
+            <li><strong>Quando coletamos:</strong> Somente quando o usuário pressiona o botão de gravação de voz no app</li>
+            <li><strong>Como processamos:</strong> O áudio é enviado para serviço de transcrição (Google Speech-to-Text ou similar)</li>
+            <li><strong>O que armazenamos:</strong> Apenas o texto transcrito é salvo. Os arquivos de áudio não são armazenados permanentemente</li>
+            <li><strong>Controle do usuário:</strong> A gravação nunca ocorre em segundo plano. O usuário tem controle total sobre quando iniciar e parar a gravação</li>
+            <li><strong>Revogação:</strong> Você pode revogar a permissão de microfone a qualquer momento nas configurações do dispositivo</li>
+        </ul>
+        
+        <h3>1.4. Logs de Sistema</h3>
+        <ul>
+            <li>Atividades técnicas dos usuários</li>
+            <li>Alterações de configuração</li>
+            <li>Eventos de sistema para auditoria</li>
         </ul>
         
         <h2>2. 🎯 Como Usamos seus Dados</h2>
@@ -124,6 +152,42 @@
         <ul>
             <li>Token de autenticação (localmente no dispositivo)</li>
             <li>Preferências do usuário (modo offline)</li>
+        </ul>
+
+        <h2>2. 🔐 Permissões do Aplicativo</h2>
+        <p>O SeeNet solicita as seguintes permissões do Android:</p>
+        
+        <h3>2.1. RECORD_AUDIO (Gravação de Áudio)</h3>
+        <p><strong>Por que precisamos:</strong></p>
+        <ul>
+            <li>Permitir que técnicos usem comandos de voz para preencher diagnósticos</li>
+            <li>Converter fala em texto automaticamente (transcrição)</li>
+            <li>Facilitar o trabalho em campo onde digitar é inconveniente</li>
+        </ul>
+        <p><strong>Como usamos:</strong></p>
+        <ul>
+            <li>A gravação só inicia quando você pressiona o botão de microfone</li>
+            <li>O áudio é processado por serviço de speech-to-text</li>
+            <li>Apenas o texto transcrito é armazenado no banco de dados</li>
+            <li>Arquivos de áudio não são salvos</li>
+        </ul>
+        <p><strong>Você pode:</strong></p>
+        <ul>
+            <li>Negar esta permissão (o app funcionará normalmente, mas sem transcrição de voz)</li>
+            <li>Revogar a qualquer momento em Configurações > Aplicativos > SeeNet > Permissões</li>
+        </ul>
+        
+        <h3>2.2. INTERNET</h3>
+        <ul>
+            <li>Comunicação com o servidor backend</li>
+            <li>Envio de dados para processamento de IA</li>
+            <li>Sincronização de diagnósticos</li>
+        </ul>
+        
+        <h3>2.3. READ_MEDIA / STORAGE</h3>
+        <ul>
+            <li>Acesso a arquivos locais para anexar documentos em diagnósticos</li>
+            <li>Leitura de imagens e documentos compartilhados</li>
         </ul>
         
         <h2>8. 👶 Restrição de Idade</h2>
